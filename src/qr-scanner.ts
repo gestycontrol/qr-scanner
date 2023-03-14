@@ -881,15 +881,60 @@ class QrScanner {
             ? 'facingMode'
             : 'deviceId';
         const constraintsWithoutCamera: Array < MediaTrackConstraints > = [{
-            width: { min: 2560 }
+            width: { min: 2560 }, advanced: [
+      { width: { exact: 2560 } },
+      { width: { exact: 1920 } },
+      { width: { exact: 1280 } },
+      { width: { exact: 1024 } },
+      { width: { exact: 900 } },
+      { width: { exact: 800 } },
+      { width: { exact: 640 } },
+      { width: { exact: 320 } }
+    ]
         }, {
-            width: { min: 1920 }
+            width: { min: 1920 }, advanced: [
+      { width: { exact: 2560 } },
+      { width: { exact: 1920 } },
+      { width: { exact: 1280 } },
+      { width: { exact: 1024 } },
+      { width: { exact: 900 } },
+      { width: { exact: 800 } },
+      { width: { exact: 640 } },
+      { width: { exact: 320 } }
+    ]
         }, {
-            width: { min: 1280 }
+            width: { min: 1280 }, advanced: [
+      { width: { exact: 2560 } },
+      { width: { exact: 1920 } },
+      { width: { exact: 1280 } },
+      { width: { exact: 1024 } },
+      { width: { exact: 900 } },
+      { width: { exact: 800 } },
+      { width: { exact: 640 } },
+      { width: { exact: 320 } }
+    ]
         }, {
-            width: { min: 1024 }
+            width: { min: 1024 }, advanced: [
+      { width: { exact: 2560 } },
+      { width: { exact: 1920 } },
+      { width: { exact: 1280 } },
+      { width: { exact: 1024 } },
+      { width: { exact: 900 } },
+      { width: { exact: 800 } },
+      { width: { exact: 640 } },
+      { width: { exact: 320 } }
+    ]
         }, {
-            width: { min: 768 }
+            width: { min: 768 }, advanced: [
+      { width: { exact: 2560 } },
+      { width: { exact: 1920 } },
+      { width: { exact: 1280 } },
+      { width: { exact: 1024 } },
+      { width: { exact: 900 } },
+      { width: { exact: 800 } },
+      { width: { exact: 640 } },
+      { width: { exact: 320 } }
+    ]
         }, {}];
         const constraintsWithCamera = constraintsWithoutCamera.map((constraint) => Object.assign({}, constraint, {
             [preferenceType]: { exact: this._preferredCamera },
