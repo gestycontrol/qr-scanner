@@ -880,7 +880,13 @@ class QrScanner {
         const preferenceType = /^(environment|user)$/.test(this._preferredCamera)
             ? 'facingMode'
             : 'deviceId';
-        const constraintsWithoutCamera: Array<MediaTrackConstraints> = [{
+        const constraintsWithoutCamera: Array < MediaTrackConstraints > = [{
+            width: { min: 1280 }
+        }, {
+            width: { min: 1920 }
+        }, {
+            width: { min: 2560 }
+        }, {
             width: { min: 1024 }
         }, {
             width: { min: 768 }
